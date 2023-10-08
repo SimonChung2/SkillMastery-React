@@ -1,8 +1,10 @@
 import {useState, useEffect} from "react";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-export default function Tutors() {
+export default function TutorListReadOnly(){
+    
+
+
+
     const [tutors, setTutors] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
@@ -25,8 +27,8 @@ export default function Tutors() {
     return (
         <div>
             <h1>Tutors</h1>
-            <div className="search-box">
-                <form onSubmit={handleSearch} >
+            <div>
+                <form onSubmit={handleSearch}>
                         <label htmlFor="skill_input">Search by Skill </label>
                         <input
                             type="text"
@@ -38,28 +40,21 @@ export default function Tutors() {
                         <input type="submit" value="Search" />
                     </form>
             </div>
-            <ul>
+            <ul className="tutor-list"> 
                 {
                     tutors.map((tutor) => (
-                        <div key={tutor._id}>
-                            <li>{tutor.firstName} {tutor.lastName} - Skills: {tutor.skills} - Hourly Rate: {tutor.hourlyRate} - Platform: {tutor.platforms}</li>
-
-                            {/* <form action="http://localhost:8888/tutors/edit">
-                                <input type="hidden" name="tutorId" value={tutor._id}/>
-                                <button type="submit">Edit</button>
-                            </form> */}
-                            <Link to = {`/edittutor/${tutor._id}`}><button>Edit</button></Link>
-
-                            <form action="http://localhost:8888/tutors/delete">
-                                <input type="hidden" name="tutorId" value={tutor._id}/>
-                                <button type="submit">Delete</button>
-                            </form>
-
-                        </div>
+                        <li key={tutor._id} className="tutor-card-list">
+                            <img className="tutor-profile-pic-list" src="./src/images/portrait-placeholder.png" alt="profile photo of tutor" />
+                            <div>
+                                <li>{tutor.firstName} {tutor.lastName} </li>
+                                <li>Skills: {tutor.skills} </li>
+                                <li>Hourly Rate: {tutor.hourlyRate}</li> 
+                                <li>Platform: {tutor.platforms}</li>
+                            </div>
+                        </li>
                     ))
                 }
             </ul>
-            <button><Link to="/addtutor">Add Tutor</Link></button>
         </div>
     );
 }

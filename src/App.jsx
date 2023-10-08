@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Tutors from "./components/tutors"
+import TutorListReadOnly from './components/tutorlistreadonly'
 import Learners from "./components/learners"
 import AddTutor from "./components/addtutor"
 import EditTutor from "./components/edittutor"
@@ -19,6 +20,8 @@ function App() {
 
           <Route path="/" element={<Home/>} />
           <Route path="/admin/tutorlist" element={<Tutors/>} />
+          <Route path="/tutorlist" element={<TutorListReadOnly/>} />
+
           <Route path="/addtutor" element={<AddTutor/>} />
           <Route path="/tutorsignup" element={<AddTutor/>} />
 
@@ -27,7 +30,7 @@ function App() {
 
 
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   )

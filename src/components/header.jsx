@@ -12,7 +12,7 @@ export default function Header() {
                         <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/admin/tutorlist">View All Tutors</NavLink>
+                        <NavLink to="/tutorlist">View All Tutors</NavLink>
                     </li>
                     <li>
                         <NavLink to="/tutorsignup">Tutor Sign Up</NavLink>
