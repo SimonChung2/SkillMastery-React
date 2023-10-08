@@ -12,7 +12,7 @@ export default function EditTutor(){
         platforms: "",
        
     });
-    console.log(tutorToEdit);
+    // console.log(tutorToEdit);
 
     useEffect(() => {
         const getTutorToEdit = async () => {

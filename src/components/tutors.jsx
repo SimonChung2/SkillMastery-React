@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Tutors() {
     const [tutors, setTutors] = useState([]);
+    const [searchInput, setSearchInput] = useState("");
 
     useEffect(() => {
         const getTutors = async () => {
@@ -14,11 +15,29 @@ export default function Tutors() {
         getTutors();
     }, []);
 
-    
+    const handleSearch = async (e) => {
+        e.preventDefault(); // Prevent the default form submission behavior
+        let response = await fetch(`http://localhost:8888/tutors/search?skill_input=${searchInput}`);
+        let data = await response.json();
+        setTutors(data);
+    };
 
     return (
         <div>
             <h1>Tutors</h1>
+            <div>
+                <form onSubmit={handleSearch}>
+                        <label htmlFor="skill_input">Search by Skill </label>
+                        <input
+                            type="text"
+                            name="skill_input"
+                            id="skill_input"
+                            value={searchInput}
+                            onChange={(e) => setSearchInput(e.target.value)}
+                        />
+                        <input type="submit" value="Search" />
+                    </form>
+            </div>
             <ul>
                 {
                     tutors.map((tutor) => (

@@ -18,11 +18,13 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home/>} />
-          <Route path="/tutorlist" element={<Tutors/>} />
+          <Route path="/admin/tutorlist" element={<Tutors/>} />
           <Route path="/addtutor" element={<AddTutor/>} />
           <Route path="/tutorsignup" element={<AddTutor/>} />
 
           <Route path="/edittutor/:tutorId" element={<EditTutor/>} />
+
+
 
         </Routes>
         <Footer />
