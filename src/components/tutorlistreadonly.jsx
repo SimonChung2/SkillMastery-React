@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 export default function TutorListReadOnly(){
     
@@ -27,8 +28,8 @@ export default function TutorListReadOnly(){
     return (
         <div>
             <h1>Tutors</h1>
-            <div>
-                <form onSubmit={handleSearch}>
+            <div className="search-box">
+                <form onSubmit={handleSearch} >
                         <label htmlFor="skill_input">Search by Skill </label>
                         <input
                             type="text"
@@ -51,6 +52,12 @@ export default function TutorListReadOnly(){
                                 <li>Hourly Rate: {tutor.hourlyRate}</li> 
                                 <li>Platform: {tutor.platforms}</li>
                             </div>
+
+                            {/* <form action="http://localhost:8888/tutorprofilelearnerview">
+                                <input type="hidden" name="tutorId" value={tutor._id}/>
+                                <button type="submit">View Profile</button>
+                            </form> */}
+                            <Link to = {`/tutorprofilelearnerview/${tutor._id}`}><button>View Profile</button></Link>
                         </li>
                     ))
                 }
