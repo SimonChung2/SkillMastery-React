@@ -11,12 +11,17 @@ import Home from "./components/home"
 import Tutors from "./components/tutors"
 import TutorListReadOnly from './components/tutorlistreadonly'
 import TutorProfileLearnerView from './components/tutorprofilelearnerview'
+import TutorProfileTutorView from './components/tutorprofiletutorview'
+
 import Learners from "./components/learners"
 import AddTutor from "./components/addtutor"
 import EditTutor from "./components/edittutor"
 
 //Learners
 import AddLearner from "./components/addlearner"
+import LearnerProfileLearnerView from './components/learnerprofilelearnerview'
+import EditLearner from "./components/editlearner"
+
 
 
 
@@ -31,11 +36,19 @@ function App() {
           <Route path="/admin/tutorlist" element={<Tutors/>} />
           <Route path="/tutorlist" element={<TutorListReadOnly/>} />
           <Route path="/tutorprofilelearnerview/:tutorId" element={<TutorProfileLearnerView/>} />
+          <Route path="/tutorprofiletutorview/:tutorId" element={<TutorProfileTutorView/>} />
+
           <Route path="/addtutor" element={<AddTutor/>} />
           <Route path="/tutorsignup" element={<AddTutor/>} />
           <Route path="/edittutor/:tutorId" element={<EditTutor/>} />
 
-          <Route path="/addlearner" element={<AddLearner/>} />
+
+          <Route path="/admin/learnerlist" element={<Learners/>} />
+
+          <Route path="/learnersignup" element={<AddLearner/>} />
+          <Route path="/editlearner/:learnerId" element={<EditLearner/>} />
+
+          <Route path="/learnerprofilelearnerview/:learnerId" element={<LearnerProfileLearnerView/>} />
 
 
         </Routes>

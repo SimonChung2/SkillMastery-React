@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
-export default function TutorProfileLearnerView () {
+export default function TutorProfileTutorView () {
 
     const { tutorId } = useParams(); //Get the tutorId from the URL
     const [tutorToView, setTutorToView] = useState({
@@ -40,12 +41,12 @@ export default function TutorProfileLearnerView () {
 
             <button>View Bookings</button>
             <button>View Messages</button>
-            <button>Update Profile</button>
-            <button>Delete Profile</button>
+            <Link to={`/edittutor/${tutorId}`}><button>Update Profile</button></Link>
+            <form action="http://localhost:8888/tutors/delete">
+                <input type="hidden" name="tutorId" value={tutorToView._id}/>
+                <button type="submit">Delete</button>
+            </form>
      
         </>
     )
-
-
-
 }
