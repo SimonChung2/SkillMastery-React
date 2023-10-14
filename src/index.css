@@ -44,7 +44,100 @@ footer {
 
 
 /* Home */
-.banner-container { 
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a background color and text color for the entire page */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Center the content in the main section */
+main {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Style the tutor cards */
+.tutor-display-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tutor-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tutor-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  width: 250px;
+  text-align: left;
+  color: #333;
+}
+
+.tutor-profile-pic-home {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/* Adjust tutor card text styles */
+.tutor-card li {
+  list-style: none;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Style links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* .banner-container { 
   display: flex;
   justify-content: center;
 }
@@ -80,11 +173,107 @@ footer {
 
 .tutor-profile-pic-home {
   width: 4em;
-}
+} */
 
 /* Tutor List */
 
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a background color and text color for the entire page */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Center the content */
+div {
+  text-align: center;
+  padding: 2rem;
+}
+
 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.search-box {
+  margin: 1rem auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.tutor-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tutor-card-list {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.tutor-profile-pic-list {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Adjust tutor card text styles */
+.tutor-card-list li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* h1 {
   text-align: center;
 }
 
@@ -118,17 +307,17 @@ h1 {
 .search-box {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  text-align: center; /* Center text within the box */
-  margin-top: 20px; /* Add margin for spacing */
+  align-items: center;
+  justify-content: center; 
+  text-align: center; 
+  margin-top: 20px; 
 }
 
 .search-box form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center form elements horizontally */
-}
+  align-items: center; 
+} */
 
 
 /* Add Tutor Form Page */
@@ -159,10 +348,60 @@ h1 {
   width: 100%; 
 }
 
+/* Add Learner Form Page */
 
+.add-learner-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 80vw;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 3em;
+}
 
+.add-learner-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
 
+.add-learner-form label {
+  text-align: left;
+  margin-bottom: 5px;
+}
 
+.add-learner-form input[type="text"],
+.add-learner-form input[type="password"] {
+  width: 100%;
+}
+
+/* Edit Tutor Form */
+.edit-tutor-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 80vw;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 3em;
+}
+
+.edit-tutor-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.edit-tutor-form label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.edit-tutor-form input[type="text"],
+.edit-tutor-form input[type="number"] {
+  width: 100%;
+}
 
 
 

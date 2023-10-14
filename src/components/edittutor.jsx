@@ -10,7 +10,9 @@ export default function EditTutor(){
         lastName: "",
         skills: "",
         platforms: "",
-       
+        email: "",
+        password: "",
+        active: "",
     });
     // console.log(tutorToEdit);
 
@@ -28,7 +30,7 @@ export default function EditTutor(){
     return(
         <div>
             <h1>Edit Tutor</h1>
-            <form method="post" action={`http://localhost:8888/tutors/edit/submit?tutorId=${tutorId}`}>
+            <form className="edit-tutor-form" method="post" action={`http://localhost:8888/tutors/edit/submit?tutorId=${tutorId}`}>
                 <input type="hidden" name="tutorId" defaultValue={tutorToEdit._id}/>
 
                 <label for="firstName">First Name</label>
@@ -45,6 +47,14 @@ export default function EditTutor(){
 
                 <label for="hourlyRate">Hourly Rate</label>
                 <input type="number" id="hourlyRate" name="hourlyRate" defaultValue={tutorToEdit.hourlyRate}/>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" defaultValue={tutorToEdit.email}/>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" defaultValue={tutorToEdit.password}/>
+
+                <input type="hidden" name="active" defaultValue={tutorToEdit.active}/>
                 
                 <button type="submit">Update Tutor</button>
 

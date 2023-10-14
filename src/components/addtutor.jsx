@@ -24,6 +24,18 @@ export default function AddTutor(){
                     <input type="number" id="hourlyRate" name="hourlyRate"/>
                 </div>
                 <div>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email"/>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"/>
+                </div>
+                <div>
+                    <input type="hidden" name="active" value="yes"/>
+                </div>
+
+                <div>
                     <input type="submit" value="Submit"/>
                 </div>
             </form>

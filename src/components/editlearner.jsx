@@ -35,6 +35,11 @@ export default function EditLearner(){
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" defaultValue={learnerToEdit.email}/>
                 
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" defaultValue={learnerToEdit.password}/>
+
+                <input type="hidden" name="active" defaultValue={learnerToEdit.active}/>
+
                 <button type="submit">Update Learner</button>
 
             </form>

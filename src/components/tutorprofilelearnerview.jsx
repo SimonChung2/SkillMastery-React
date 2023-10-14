@@ -30,7 +30,10 @@ export default function TutorProfileLearnerView () {
             <h1>{tutorToView.firstName} {tutorToView.lastName}</h1>
 
             {/* <img className="tutor-profile-pic-list" src="./src/images/portrait-placeholder.png" alt="profile photo of tutor" /> */}
-            
+            <div className="tutor-profile-email">
+                Email:  {tutorToView.email}
+            </div>
+
             <div className="tutor-profile-skills">
                 Skills:  {tutorToView.skills}
             </div>

@@ -6,6 +6,7 @@ import './App.css'
 import Header from "./components/header"
 import Footer from "./components/footer"
 import Home from "./components/home"
+import Login from "./components/login"
 
 //Tutors
 import Tutors from "./components/tutors"
@@ -50,6 +51,8 @@ function App() {
 
           <Route path="/learnerprofilelearnerview/:learnerId" element={<LearnerProfileLearnerView/>} />
 
+
+          <Route path="/login" element={<Login/>} />
 
         </Routes>
         {/* <Footer /> */}

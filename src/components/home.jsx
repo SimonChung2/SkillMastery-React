@@ -15,9 +15,16 @@ export default function Home () {
 
     return (
         <main>
-            <div className="banner-container">
-                <img className="banner" src="./src/images/banner-placeholder.svg" alt="banner image for SkillMastery website" />
-            </div>
+            
+                <h1>Skill Mastery</h1>
+                <p>
+                Your gateway to endless learning opportunities.
+
+                No matter what skill you aspire to master, you'll find the perfect tutor here.
+
+                And if you're a tutor, rest assured that your future students are just a click away.
+                </p>
+            
             <section className="tutor-display-container">
                 <div className="tutor-display">
                     {
