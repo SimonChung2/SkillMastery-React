@@ -32,7 +32,7 @@ export default function AddTutor(){
                     <input type="password" id="password" name="password"/>
                 </div>
                 <div>
-                    <input type="hidden" name="active" value="yes"/>
+                    <input type="hidden" name="active" value="no"/>
                 </div>
 
                 <div>

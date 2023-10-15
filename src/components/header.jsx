@@ -1,28 +1,33 @@
 import { NavLink } from "react-router-dom";
+import {useState, useEffect} from "react";
 
 export default function Header() {
+
+    const [menuLinks, setMenuLinks] = useState([]);
+
+    useEffect(() => {
+        const getmenuLinks = async () => {
+            let response = await fetch("http://localhost:8888/menulinks");
+            let data = await response.json();
+            setMenuLinks(data);
+        }
+        getmenuLinks();
+    }, []);
 
 
     return (
         <header>
-            <img src="" alt="" />
             <nav>
                 <ul>
-                    <li>
-                        <NavLink to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/tutorlist">View All Tutors</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/tutorsignup">Tutor Sign Up</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/learnersignup">Learner Sign Up</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/login">Login</NavLink>
-                    </li>
+                    {
+                        menuLinks.map((menuLink) => (
+                            <li key={menuLink.linkName}>
+                                <NavLink to={menuLink.path}>{menuLink.linkName}</NavLink>
+
+
+                            </li>
+                        ))
+                    }
                 </ul>               
             </nav>
         </header>

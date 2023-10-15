@@ -6,7 +6,9 @@ import './App.css'
 import Header from "./components/header"
 import Footer from "./components/footer"
 import Home from "./components/home"
-import Login from "./components/login"
+import TutorLogin from "./components/tutorlogin"
+import LearnerLogin from "./components/learnerlogin"
+
 
 //Tutors
 import Tutors from "./components/tutors"
@@ -52,7 +54,9 @@ function App() {
           <Route path="/learnerprofilelearnerview/:learnerId" element={<LearnerProfileLearnerView/>} />
 
 
-          <Route path="/login" element={<Login/>} />
+          <Route path="/tutor/login" element={<TutorLogin/>} />
+          <Route path="/learner/login" element={<LearnerLogin/>} />
+
 
         </Routes>
         {/* <Footer /> */}

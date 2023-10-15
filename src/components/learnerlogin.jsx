@@ -1,11 +1,12 @@
-export default function Login () {
+export default function LearnerLogin () {
 
 
 
 
     return (
         <>
-            <form className="login-form">
+            <h1>Learner Login</h1>
+            <form method="post" action="http://localhost:8888/learner/login" className="login-form">
                 <div>
                     <label for="email">Email</label>
                     <input type="text" id="email" name="email"/>
@@ -14,6 +15,7 @@ export default function Login () {
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password"/>
                 </div>
+                <input type="submit" value="Submit"/>
             </form>               
         </>
     )
