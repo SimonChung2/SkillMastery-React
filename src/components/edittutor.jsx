@@ -18,7 +18,7 @@ export default function EditTutor(){
 
     useEffect(() => {
         const getTutorToEdit = async () => {
-            let response = await fetch(`http://localhost:8888/tutors/edit?tutorId=${tutorId}`);
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/tutors/edit?tutorId=${tutorId}`);
             let data = await response.json();
             setTutorToEdit(data);
         }
@@ -30,7 +30,7 @@ export default function EditTutor(){
     return(
         <div>
             <h1>Edit Tutor</h1>
-            <form className="edit-tutor-form" method="post" action={`http://localhost:8888/tutors/edit/submit?tutorId=${tutorId}`}>
+            <form className="edit-tutor-form" method="post" action={`${import.meta.env.VITE_SERVER_URL}/tutors/edit/submit?tutorId=${tutorId}`}>
                 <input type="hidden" name="tutorId" defaultValue={tutorToEdit._id}/>
 
                 <label for="firstName">First Name</label>

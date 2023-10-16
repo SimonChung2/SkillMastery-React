@@ -2,7 +2,7 @@ import {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 export default function EditLearner(){
-
+    const serverURL = import.meta.env.VITE_SERVER_URL;
     const { learnerId } = useParams(); //Get the tutorId from the URL
     const [learnerToEdit, setLearnerToEdit] = useState({
         _id: "", // Initialize with an empty string or default value
@@ -13,7 +13,7 @@ export default function EditLearner(){
 
     useEffect(() => {
         const getLearnerToEdit = async () => {
-            let response = await fetch(`http://localhost:8888/learners/edit?learnerId=${learnerId}`);
+            let response = await fetch(`${serverURL}/learners/edit?learnerId=${learnerId}`);
             let data = await response.json();
             setLearnerToEdit(data);
         }
@@ -23,7 +23,7 @@ export default function EditLearner(){
     return(
         <div>
             <h1>Edit Learner</h1>
-            <form method="post" action={`http://localhost:8888/learners/edit/submit?learnerId=${learnerId}`}>
+            <form method="post" action={`${import.meta.env.VITE_SERVER_URL}/learners/edit/submit?learnerId=${learnerId}`}>
                 <input type="hidden" name="learnerId" defaultValue={learnerToEdit._id}/>
 
                 <label for="firstName">First Name</label>

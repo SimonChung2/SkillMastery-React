@@ -6,7 +6,7 @@ export default function Home () {
 
     useEffect(() => {
         const getDisplayedTutors = async () => {
-            let response = await fetch("http://localhost:8888/tutors/display");
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/tutors/display`);
             let data = await response.json();
             setDisplayedTutors(data);
         }
@@ -33,7 +33,7 @@ export default function Home () {
                                 <img className = "tutor-profile-pic-home" src="./src/images/portrait-placeholder.png" alt="tutor profile picture" />
                                 <li>{tutor.firstName} {tutor.lastName} </li>
                                 <li> Skills: {tutor.skills} </li>
-                                <li> Price: {tutor.hourlyRate} /hr </li>
+                                <li> Price: ${tutor.hourlyRate} /hr </li>
                             </div>
                         ))
                     }

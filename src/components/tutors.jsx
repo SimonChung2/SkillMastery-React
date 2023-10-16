@@ -7,7 +7,7 @@ export default function Tutors() {
 
     useEffect(() => {
         const getTutors = async () => {
-            let response = await fetch("http://localhost:8888/tutors");
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/tutors`);
             let data = await response.json();
             setTutors(data);
         }
@@ -16,7 +16,7 @@ export default function Tutors() {
 
     const handleSearch = async (e) => {
         e.preventDefault(); // Prevent the default form submission behavior
-        let response = await fetch(`http://localhost:8888/tutors/search?skill_input=${searchInput}`);
+        let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/tutors/search?skill_input=${searchInput}`);
         let data = await response.json();
         setTutors(data);
     };
@@ -49,7 +49,7 @@ export default function Tutors() {
                             </form> */}
                             <Link to = {`/edittutor/${tutor._id}`}><button>Edit</button></Link>
 
-                            <form action="http://localhost:8888/tutors/delete">
+                            <form action={`${import.meta.env.VITE_SERVER_URL}/tutors/delete`}>
                                 <input type="hidden" name="tutorId" value={tutor._id}/>
                                 <button type="submit">Delete</button>
                             </form>

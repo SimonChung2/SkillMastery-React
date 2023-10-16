@@ -2,7 +2,7 @@ export default function AddTutor(){
     return (
         <div>
         <h1>Tutor Sign Up</h1>
-            <form className="add-tutor-form" method="post" action="http://localhost:8888/tutors/add/submit">
+            <form className="add-tutor-form" method="post" action={`${import.meta.env.VITE_SERVER_URL}/tutors/add/submit`}>
                 <div>
                     <label for="firstName">First Name</label>
                     <input type="text" id="firstName" name="firstName"/>

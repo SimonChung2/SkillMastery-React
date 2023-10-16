@@ -6,7 +6,7 @@ export default function Learners() {
 
     useEffect(() => {
         const getLearners = async () => {
-            let response = await fetch("http://localhost:8888/learners");
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/learners`);
             let data = await response.json();
             setLearners(data);
         }
@@ -25,7 +25,7 @@ export default function Learners() {
 
                             <Link to = {`/editlearner/${learner._id}`}><button>Edit</button></Link>
 
-                            <form action="http://localhost:8888/learners/delete">
+                            <form action={`${import.meta.env.VITE_SERVER_URL}/learners/delete`}>
                                 <input type="hidden" name="learnerId" value={learner._id}/>
                                 <button type="submit">Delete</button>
                             </form>

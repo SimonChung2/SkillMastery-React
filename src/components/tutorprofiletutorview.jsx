@@ -17,7 +17,7 @@ export default function TutorProfileTutorView () {
 
     useEffect(() => {
         const getTutorToView = async () => {
-            let response = await fetch(`http://localhost:8888/tutorprofilelearnerview?tutorId=${tutorId}`);
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/tutorprofilelearnerview?tutorId=${tutorId}`);
             let data = await response.json();
             setTutorToView(data);
         }
@@ -44,7 +44,7 @@ export default function TutorProfileTutorView () {
             <button>View Bookings</button>
             <button>View Messages</button>
             <Link to={`/edittutor/${tutorId}`}><button>Update Profile</button></Link>
-            <form action="http://localhost:8888/tutors/delete">
+            <form action={`${import.meta.env.VITE_SERVER_URL}/tutors/delete`}>
                 <input type="hidden" name="tutorId" value={tutorToView._id}/>
                 <button type="submit">Delete</button>
             </form>

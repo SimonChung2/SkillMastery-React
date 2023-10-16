@@ -7,7 +7,7 @@ export default function Header() {
 
     useEffect(() => {
         const getmenuLinks = async () => {
-            let response = await fetch("http://localhost:8888/menulinks");
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/menulinks`);
             let data = await response.json();
             setMenuLinks(data);
         }

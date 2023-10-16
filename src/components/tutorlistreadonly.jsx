@@ -11,7 +11,7 @@ export default function TutorListReadOnly(){
 
     useEffect(() => {
         const getTutors = async () => {
-            let response = await fetch("http://localhost:8888/tutors");
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/tutors`);
             let data = await response.json();
             setTutors(data);
         }
@@ -20,7 +20,7 @@ export default function TutorListReadOnly(){
 
     const handleSearch = async (e) => {
         e.preventDefault(); // Prevent the default form submission behavior
-        let response = await fetch(`http://localhost:8888/tutors/search?skill_input=${searchInput}`);
+        let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/tutors/search?skill_input=${searchInput}`);
         let data = await response.json();
         setTutors(data);
     };

@@ -16,7 +16,7 @@ export default function TutorProfileLearnerView () {
 
     useEffect(() => {
         const getTutorToView = async () => {
-            let response = await fetch(`http://localhost:8888/tutorprofilelearnerview?tutorId=${tutorId}`);
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/tutorprofilelearnerview?tutorId=${tutorId}`);
             let data = await response.json();
             setTutorToView(data);
         }

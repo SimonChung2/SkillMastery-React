@@ -15,7 +15,7 @@ export default function LearnerProfileLearnerView () {
 
     useEffect(() => {
         const getLearnerToView = async () => {
-            let response = await fetch(`http://localhost:8888/learnerprofilelearnerview?learnerId=${learnerId}`);
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/learnerprofilelearnerview?learnerId=${learnerId}`);
             let data = await response.json();
             setLearnerToView(data);
         }
@@ -36,7 +36,7 @@ export default function LearnerProfileLearnerView () {
 
             <Link to={`/editlearner/${learnerId}`}><button>Update Profile</button></Link>
 
-            <form action="http://localhost:8888/learners/delete">
+            <form action={`${import.meta.env.VITE_SERVER_URL}/learners/delete`}>
                 <input type="hidden" name="learnerId" value={learnerToView._id}/>
                 <button type="submit">Delete</button>
             </form>

@@ -3,7 +3,7 @@ export default function AddLearner(){
         <div>
             
             <h1>Learner Sign Up</h1>
-                <form className="add-learner-form" method="post" action="http://localhost:8888/learners/add/submit">
+                <form className="add-learner-form" method="post" action={`${import.meta.env.VITE_SERVER_URL}/learners/add/submit`}>
                     <div className="add-learner-form-container">
                         <div>
                             <label for="firstName">First Name</label>
