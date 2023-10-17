@@ -45,7 +45,7 @@ export default function TutorListReadOnly(){
                 {
                     tutors.map((tutor) => (
                         <li key={tutor._id} className="tutor-card-list">
-                            <img className="tutor-profile-pic-list" src="./src/images/portrait-placeholder.png" alt="profile photo of tutor" />
+                            <img className="tutor-profile-pic-list" src="https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg" alt="profile photo of tutor" />
                             <div>
                                 <li>{tutor.firstName} {tutor.lastName} </li>
                                 <li>Skills: {tutor.skills} </li>
