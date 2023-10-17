@@ -8,6 +8,8 @@ import Footer from "./components/footer"
 import Home from "./components/home"
 import TutorLogin from "./components/tutorlogin"
 import LearnerLogin from "./components/learnerlogin"
+import AdminLogin from "./components/adminlogin"
+
 
 
 //Tutors
@@ -25,6 +27,9 @@ import AddLearner from "./components/addlearner"
 import LearnerProfileLearnerView from './components/learnerprofilelearnerview'
 import EditLearner from "./components/editlearner"
 
+//Admin
+import AdminAddTutor from './components/adminaddtutor'
+import AdminEditTutor from './components/adminedittutor'
 
 
 
@@ -57,6 +62,9 @@ function App() {
           <Route path="/tutor/login" element={<TutorLogin/>} />
           <Route path="/learner/login" element={<LearnerLogin/>} />
 
+          <Route path="/admin/login" element={<AdminLogin/>} />
+          <Route path="/admin/addtutor" element={<AdminAddTutor/>} />
+          <Route path="/admin/edittutor/:tutorId" element={<AdminEditTutor/>} />
 
         </Routes>
         {/* <Footer /> */}

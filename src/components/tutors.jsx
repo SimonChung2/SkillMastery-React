@@ -35,30 +35,50 @@ export default function Tutors() {
                             onChange={(e) => setSearchInput(e.target.value)}
                         />
                         <input type="submit" value="Search" />
-                    </form>
+                </form>
             </div>
-            <ul>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Skills</th>
+                    <th>Hourly Rate</th>
+                    <th>Platform</th>
+                    <th>Email</th>
+                    <th></th>
+                    <th></th>
+                </tr>
                 {
                     tutors.map((tutor) => (
-                        <div key={tutor._id}>
-                            <li>{tutor.firstName} {tutor.lastName} - Skills: {tutor.skills} - Hourly Rate: {tutor.hourlyRate} - Platform: {tutor.platforms}</li>
+                        <tr key={tutor._id}>
+                            <td>{tutor._id}</td>
+                            <td>{tutor.firstName}</td>
+                            <td>{tutor.lastName}</td>
+                            <td>{tutor.skills}</td>
+                            <td>{tutor.hourlyRate}</td>
+                            <td>{tutor.platforms}</td>
+                            <td>{tutor.email}</td>
+                            <td><Link to = {`/admin/edittutor/${tutor._id}`}>
+                                <button>Edit</button></Link>
+                            </td>
+                            <td>                            
+                                <form action={`${import.meta.env.VITE_SERVER_URL}/admin/tutors/delete`}>
+                                    <input type="hidden" name="tutorId" value={tutor._id}/>
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>  
 
                             {/* <form action="http://localhost:8888/tutors/edit">
                                 <input type="hidden" name="tutorId" value={tutor._id}/>
                                 <button type="submit">Edit</button>
                             </form> */}
-                            <Link to = {`/edittutor/${tutor._id}`}><button>Edit</button></Link>
-
-                            <form action={`${import.meta.env.VITE_SERVER_URL}/tutors/delete`}>
-                                <input type="hidden" name="tutorId" value={tutor._id}/>
-                                <button type="submit">Delete</button>
-                            </form>
-
-                        </div>
+                            
+                        </tr>
                     ))
                 }
-            </ul>
-            <button><Link to="/addtutor">Add Tutor</Link></button>
+            </table>
+            <button><Link to="/admin/addtutor">Add Tutor</Link></button>
         </div>
     );
 }
