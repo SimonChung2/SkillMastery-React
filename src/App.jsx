@@ -39,7 +39,7 @@ function App() {
           <Route path="/admin/tutorlist" element={<Tutors/>} />
           <Route path="/tutorlist" element={<TutorListReadOnly/>} />
           <Route path="/tutorprofilelearnerview/:tutorId" element={<TutorProfileLearnerView/>} />
-          <Route path="/tutorprofiletutorview/652dfe91a0c9f09cdf2c1aeb" element={<TutorProfileTutorView/>} />
+          <Route path="/tutorprofiletutorview/:tutorId" element={<TutorProfileTutorView/>} />
 
           <Route path="/addtutor" element={<AddTutor/>} />
           <Route path="/tutorsignup" element={<AddTutor/>} />
