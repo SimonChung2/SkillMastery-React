@@ -30,7 +30,7 @@ export default function Home () {
                     {
                         displayedTutors.map((tutor) => (
                             <div className="tutor-card" key={tutor._id}>
-                                <img className = "tutor-profile-pic-home" src="./src/images/portrait-placeholder.png" alt="tutor profile picture" />
+                                <img className = "tutor-profile-pic-home" src="https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg" alt="tutor profile picture" />
                                 <li>{tutor.firstName} {tutor.lastName} </li>
                                 <li> Skills: {tutor.skills} </li>
                                 <li> Price: ${tutor.hourlyRate} /hr </li>
