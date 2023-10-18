@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 
 export default function Home () {
@@ -37,6 +38,10 @@ export default function Home () {
                             </div>
                         ))
                     }
+                </div>
+                <div>
+                    <Link to="/tutorlist"><button>See All Our Tutors</button></Link>
+                    <Link to="/tutorlist"><button>Become A Tutor</button></Link>
                 </div>
             </section>
         </main>
