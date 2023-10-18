@@ -39,7 +39,7 @@ export default function Home () {
                         ))
                     }
                 </div>
-                <div>
+                <div className = "home-buttons">
                     <Link to="/tutorlist"><button>See All Our Tutors</button></Link>
                     <Link to="/addtutor"><button>Become A Tutor</button></Link>
                 </div>

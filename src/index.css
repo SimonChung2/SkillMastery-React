@@ -131,6 +131,8 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-decoration: none; /* Add this to remove underline */
+  margin: 10px; /* Add some margin to improve spacing */
 }
 
 .btn:hover {
