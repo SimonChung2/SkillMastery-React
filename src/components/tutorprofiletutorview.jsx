@@ -50,7 +50,7 @@ export default function TutorProfileTutorView () {
             <Link to={`/edittutor/${tutorId}`}><button>Update Profile</button></Link>
             <form action={`${import.meta.env.VITE_SERVER_URL}/tutors/delete`}>
                 <input type="hidden" name="tutorId" value={tutorToView._id}/>
-                <button type="submit">Delete</button>
+                <button type="submit">Delete Profile</button>
             </form>
      
         </>
