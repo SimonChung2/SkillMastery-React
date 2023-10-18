@@ -27,20 +27,20 @@ export default function TutorProfileTutorView () {
     console.log(tutorToView);
 
     return(
-        <>
-            <h1>{tutorToView.firstName} {tutorToView.lastName}</h1>
+        <div tutor-profile-container>
+            <h1 className="tutor-profile-header">{tutorToView.firstName} {tutorToView.lastName}</h1>
 
-            <img className="tutor-profile-pic-list" src="https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg" alt="profile photo of tutor" />
-            <div >
+            <img className="tutor-profile-pic" src="https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg" alt="profile photo of tutor" />
+            <div className="tutor-profile-item">
                 Email: {tutorToView.email}
             </div>
-            <div>
+            <div className="tutor-profile-item">
                 Skills:  {tutorToView.skills}
             </div>
-            <div>
+            <div className="tutor-profile-item">
                 Hourly Rate: {tutorToView.hourlyRate}
             </div>
-            <div>
+            <div className="tutor-profile-item">
                 Platforms: {tutorToView.platforms}
             </div>
 
@@ -53,6 +53,6 @@ export default function TutorProfileTutorView () {
                 <button type="submit">Delete Profile</button>
             </form>
      
-        </>
+        </div>
     )
 }
