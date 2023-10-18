@@ -40,6 +40,10 @@ export default function TutorProfileTutorView () {
             <div className="tutor-profile-hourly-rate">
                 Hourly Rate: {tutorToView.hourlyRate}
             </div>
+            <div className="tutor-profile-platform">
+                Platforms: {tutorToView.platforms}
+            </div>
+
 
             <button>View Bookings</button>
             <button>View Messages</button>
