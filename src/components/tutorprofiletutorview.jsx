@@ -30,17 +30,17 @@ export default function TutorProfileTutorView () {
         <>
             <h1>{tutorToView.firstName} {tutorToView.lastName}</h1>
 
-            {/* <img className="tutor-profile-pic-list" src="./src/images/portrait-placeholder.png" alt="profile photo of tutor" /> */}
-            <div className="tutor-profile-email">
+            <img className="tutor-profile-pic-list" src="https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg" alt="profile photo of tutor" />
+            <div >
                 Email: {tutorToView.email}
             </div>
-            <div className="tutor-profile-skills">
+            <div>
                 Skills:  {tutorToView.skills}
             </div>
-            <div className="tutor-profile-hourly-rate">
+            <div>
                 Hourly Rate: {tutorToView.hourlyRate}
             </div>
-            <div className="tutor-profile-platform">
+            <div>
                 Platforms: {tutorToView.platforms}
             </div>
 
