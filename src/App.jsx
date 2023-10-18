@@ -30,6 +30,8 @@ import EditLearner from "./components/editlearner"
 //Admin
 import AdminAddTutor from './components/adminaddtutor'
 import AdminEditTutor from './components/adminedittutor'
+import AdminAddLearner from './components/adminaddlearner'
+
 
 
 
@@ -65,6 +67,8 @@ function App() {
           <Route path="/admin/login" element={<AdminLogin/>} />
           <Route path="/admin/addtutor" element={<AdminAddTutor/>} />
           <Route path="/admin/edittutor/:tutorId" element={<AdminEditTutor/>} />
+          <Route path="/admin/addlearner" element={<AdminAddLearner/>} />
+
 
         </Routes>
         {/* <Footer /> */}

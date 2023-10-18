@@ -4,6 +4,17 @@ import { Link } from "react-router-dom";
 export default function Tutors() {
     const [tutors, setTutors] = useState([]);
     const [searchInput, setSearchInput] = useState("");
+    const [learners, setLearners] = useState([]);
+
+    useEffect(() => {
+        const getLearners = async () => {
+            let response = await fetch(`${import.meta.env.VITE_SERVER_URL}/learners`);
+            let data = await response.json();
+            setLearners(data);
+        }
+        getLearners();
+    }, []);
+
 
     useEffect(() => {
         const getTutors = async () => {
@@ -22,6 +33,7 @@ export default function Tutors() {
     };
 
     return (
+        <>
         <div>
             <h1>Tutors</h1>
             <div className="search-box">
@@ -79,6 +91,47 @@ export default function Tutors() {
                 }
             </table>
             <button><Link to="/admin/addtutor">Add Tutor</Link></button>
+            
         </div>
+        <div>
+            <h2>Learners</h2>
+
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    
+                    {
+                        learners.map((learner) => (
+                            
+                                <tr>
+                                    <td>{learner._id}</td>
+                                    <td>{learner.firstName}</td>
+                                    <td>{learner.lastName}</td>
+                                    <td>{learner.email}</td>
+                                    <td>
+                                        <Link to = {`/editlearner/${learner._id}`}><button>Edit</button></Link>
+                                    </td>
+                                    <td>
+                                        <form action={`${import.meta.env.VITE_SERVER_URL}/admin/learners/delete`}>
+                                            <input type="hidden" name="learnerId" value={learner._id}/>
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                    </td>  
+                                </tr>
+                            
+                        ))
+                    }
+                    
+                </table>
+                <button><Link to="/admin/addlearner">Add Learner</Link></button>
+
+        </div>
+        </>
     );
 }
