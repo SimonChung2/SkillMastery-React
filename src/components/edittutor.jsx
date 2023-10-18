@@ -30,7 +30,7 @@ export default function EditTutor(){
     return(
         <div>
             <h1>Edit Tutor</h1>
-            <form className="edit-tutor-form" method="post" action={`${import.meta.env.VITE_SERVER_URL}/tutors/edit/submit?tutorId=${tutorId}`}>
+            <form className="login-form" method="post" action={`${import.meta.env.VITE_SERVER_URL}/tutors/edit/submit?tutorId=${tutorId}`}>
                 <input type="hidden" name="tutorId" defaultValue={tutorToEdit._id}/>
 
                 <label for="firstName">First Name</label>

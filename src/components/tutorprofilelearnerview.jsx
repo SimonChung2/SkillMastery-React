@@ -35,10 +35,13 @@ export default function TutorProfileLearnerView () {
             </div>
 
             <div className="tutor-profile-skills">
-                Skills:  {tutorToView.skills}
+                Skill:  {tutorToView.skills}
             </div>
             <div className="tutor-profile-hourly-rate">
                 Hourly Rate: {tutorToView.hourlyRate}
+            </div>
+            <div className="tutor-profile-platform">
+                Platforms: {tutorToView.platforms}
             </div>
 
             <button>Book a Lesson</button>

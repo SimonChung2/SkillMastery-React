@@ -35,15 +35,16 @@ export default function Home () {
                                 <li>{tutor.firstName} {tutor.lastName} </li>
                                 <li> Skills: {tutor.skills} </li>
                                 <li> Price: ${tutor.hourlyRate} /hr </li>
+                                <Link to = {`/tutorprofilelearnerview/${tutor._id}`}><button>View Profile</button></Link>
                             </div>
                         ))
                     }
                 </div>
-                <div className = "home-buttons">
-                    <Link to="/tutorlist"><button>See All Our Tutors</button></Link>
-                    <Link to="/addtutor"><button>Become A Tutor</button></Link>
-                </div>
             </section>
+            <div className = "home-buttons">
+                <Link to="/tutorlist"><button>See All Our Tutors</button></Link>
+                <Link to="/addtutor"><button>Become A Tutor</button></Link>
+            </div>
         </main>
     );
 }

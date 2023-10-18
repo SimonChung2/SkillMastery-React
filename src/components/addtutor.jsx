@@ -2,7 +2,7 @@ export default function AddTutor(){
     return (
         <div>
         <h1>Tutor Sign Up</h1>
-            <form className="add-tutor-form" method="post" action={`${import.meta.env.VITE_SERVER_URL}/tutors/add/submit`}>
+            <form className="login-form" method="post" action={`${import.meta.env.VITE_SERVER_URL}/tutors/add/submit`}>
                 <div>
                     <label for="firstName">First Name</label>
                     <input type="text" id="firstName" name="firstName"/>
@@ -20,7 +20,7 @@ export default function AddTutor(){
                     <input type="text" id="platforms" name="platforms"/>
                 </div>
                 <div>
-                    <label for="hourlyRate">Hourly Rate</label>
+                    <label className="hourly-rate" for="hourlyRate">Hourly Rate</label>
                     <input type="number" id="hourlyRate" name="hourlyRate"/>
                 </div>
                 <div>

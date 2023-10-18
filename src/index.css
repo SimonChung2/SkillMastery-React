@@ -45,21 +45,21 @@ footer {
 
 /* Home */
 
-/* Reset default margin and padding */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Set a background color and text color for the entire page */
+
 body {
   background-color: #f7f7f7;
   font-family: Arial, sans-serif;
   color: #333;
 }
 
-/* Center the content in the main section */
+
 main {
   text-align: center;
   padding: 2rem;
@@ -119,6 +119,26 @@ a {
 }
 
 /* Button styles */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: grey; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -131,62 +151,24 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s;
-  text-decoration: none; /* Add this to remove underline */
-  margin: 10px; /* Add some margin to improve spacing */
+  text-decoration: none; 
+  margin: 10px; 
 }
 
 .btn:hover {
   background-color: #0056b3;
 }
 
-/* .banner-container { 
-  display: flex;
-  justify-content: center;
-}
-
-.banner {
-  width: 90vw;
-  height: 60vh;
-}
-
-.tutor-display-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1em;
-
-}
-
-.tutor-display {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.8em;
-  width: 90vw;
-}
-
-.tutor-display li {
-  list-style-type: none;
-}
-
-.tutor-card {
-  background-color: grey;
-  color: white;
-  padding: 0.2em;
-}
-
-.tutor-profile-pic-home {
-  width: 4em;
-} */
 
 /* Tutor List */
 
-/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Set a background color and text color for the entire page */
+
 body {
   background-color: #f7f7f7;
   font-family: Arial, sans-serif;
@@ -275,80 +257,35 @@ input[type="submit"]:hover {
   margin: 0.5rem 0;
 }
 
-/* h1 {
-  text-align: center;
-}
-
-.tutor-list {
-  list-style-type: none;
-  display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tutor-card-list {
-  background-color: grey;
-  color: white;
-  min-width: 21em;
-  max-width: 25em;
-  display: flex;
-  margin: 1em;
-}
-
-.tutor-profile-pic-list {
-  width: 4em;
-  margin: 1em;
-}
-
-.tutor-card-list div {
-  margin: 1em;
-}
-
-.search-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  text-align: center; 
-  margin-top: 20px; 
-}
-
-.search-box form {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-} */
 
 
 /* Add Tutor Form Page */
-
 .add-tutor-form {
   display: grid;
-  grid-template-columns: 1fr; 
-  gap: 10px; 
-  width: 80vw; 
+  grid-template-columns: 1fr;
+  gap: 2px;
   max-width: 400px;
-  margin: 0 auto; 
+  margin: 0 auto;
   padding-top: 3em;
 }
 
 .add-tutor-form div {
   display: flex;
-  flex-direction: column; 
-  margin-bottom: 10px; 
+  flex-direction: column;
+  margin-bottom: 1px; 
 }
 
 .add-tutor-form label {
-  text-align: left; 
-  margin-bottom: 5px; 
+  text-align: left;
+  margin-bottom: 1px;
 }
 
 .add-tutor-form input[type="text"],
-.add-tutor-form input[type="number"] {
-  width: 100%; 
+.add-tutor-form input[type="number"],
+.add-tutor-form input[type="password"] {
+  width: 100%;
 }
+
 
 /* Add Learner Form Page */
 
@@ -410,8 +347,62 @@ table, th, td {
   border: 1px solid;
 }
 
+/*  Login Form */
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.login-form h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  text-align: center;
+}
 
+.login-form div {
+  margin: 10px 0;
+}
+
+.login-form label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; 
+  text-transform: uppercase;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.login-form .hourly-rate { 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
 
 
 
