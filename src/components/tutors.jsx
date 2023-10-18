@@ -115,7 +115,7 @@ export default function Tutors() {
                                     <td>{learner.lastName}</td>
                                     <td>{learner.email}</td>
                                     <td>
-                                        <Link to = {`/editlearner/${learner._id}`}><button>Edit</button></Link>
+                                        <Link to = {`/admin/editlearner/${learner._id}`}><button>Edit</button></Link>
                                     </td>
                                     <td>
                                         <form action={`${import.meta.env.VITE_SERVER_URL}/admin/learners/delete`}>
