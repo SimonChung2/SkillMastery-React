@@ -41,7 +41,7 @@ export default function Home () {
                 </div>
                 <div>
                     <Link to="/tutorlist"><button>See All Our Tutors</button></Link>
-                    <Link to="/tutorlist"><button>Become A Tutor</button></Link>
+                    <Link to="/addtutor"><button>Become A Tutor</button></Link>
                 </div>
             </section>
         </main>
